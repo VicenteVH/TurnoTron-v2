@@ -1,0 +1,23 @@
+{% extends 'base.html' %} <!-- Extiende el diseño base -->
+
+{% block title %}Próximas Reservas{% endblock %} <!-- Título de la página -->
+
+{% block header_title %}Próximas Reservas{% endblock %} <!-- Título del encabezado -->
+
+{% block content %}
+    <div class="upcoming-appointments">
+        
+        {% if upcoming_appointments %}
+            <ul>
+                {% for appointment in upcoming_appointments %}
+                    <li>
+                        <strong>{{ appointment.date }}</strong> - <span style="color: #fff;">{{ appointment.barber_shop.name }}</span>
+                        <a href="{% url 'appointment_detail' appointment.id %}">Ver detalles</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No hay próximas reservas.</p> <!-- Mensaje si no hay próximas reservas -->
+        {% endif %}
+    </div>
+{% endblock %}

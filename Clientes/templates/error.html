@@ -1,0 +1,12 @@
+{% extends 'base.html' %} <!-- Extiende la plantilla base.html -->
+
+{% block title %}Error{% endblock %} <!-- Define el título de la página como "Error" -->
+
+{% block content %} <!-- Inicia el bloque de contenido -->
+
+    <div class="container"> <!-- Inicia el contenedor principal -->
+        <h1>Error</h1> <!-- Título de la sección -->
+        <p>{{ message }}</p> <!-- Muestra el mensaje de error proporcionado -->
+    </div> <!-- Termina el contenedor principal -->
+
+{% endblock %} <!-- Termina el bloque de contenido -->

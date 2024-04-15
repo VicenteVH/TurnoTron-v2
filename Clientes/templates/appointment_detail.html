@@ -1,0 +1,18 @@
+{% extends 'base.html' %} <!-- Extiende el diseño base -->
+
+{% block title %}Detalles de la Reserva{% endblock %} <!-- Título de la página -->
+
+{% block header_title %}Detalles de la Reserva{% endblock %} <!-- Título del encabezado -->
+
+{% block content %}
+    <div class="appointment-details">
+        <div class="details-container">
+            <p><strong>Barbería:</strong> {{ appointment.barber_shop }}</p>
+            <p><strong>Fecha:</strong> {{ appointment.date }}</p>
+            <p><strong>Hora:</strong> {{ appointment.time }}</p>
+            <p><strong>Emisión:</strong> {{ appointment.issued_date }}</p>
+        </div>
+        <a class="modify-button" href="{% url 'modify_appointment' appointment.id %}">Modificar</a>
+        <a class="cancel-button" href="{% url 'cancel_appointment' appointment.id %}">Cancelar</a>
+    </div>
+{% endblock %} <!-- Fin del bloque de contenido -->

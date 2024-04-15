@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %} <!-- Extiende el diseño base -->
+
+{% block title %}Cancelación Exitosa{% endblock %} <!-- Título de la página -->
+
+{% block content %} <!-- Contenido de la página -->
+    <div class="container"> <!-- Contenedor principal -->
+        <h1>¡Cancelación Exitosa!</h1> <!-- Título principal -->
+        <p>La reserva ha sido cancelada exitosamente.</p> <!-- Mensaje de confirmación -->
+        <a class="btn btn-primary" href="{% url 'appointment_list' %}">Volver a la lista de reservas</a> <!-- Botón para volver a la lista de reservas -->
+    </div>
+
+{% endblock %} <!-- Fin del bloque de contenido -->
+
